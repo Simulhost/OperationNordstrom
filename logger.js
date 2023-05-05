@@ -2,6 +2,7 @@ const net = require('net');
 const fs = require('fs');
 
 const port = 1337;
+const hostname = '0.0.0.0';
 const logFilePath = 'log.txt';
 const loggedIPs = new Set();
 
@@ -22,5 +23,5 @@ const server = net.createServer((socket) => {
 });
 
 server.listen(port, () => {
-  console.log(`Server listening on port ${port}`);
+  console.log(`Server listening on hostname ${hostname} and port ${port}`);
 });
