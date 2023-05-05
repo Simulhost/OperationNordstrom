@@ -12,7 +12,7 @@ const server = net.createServer((socket) => {
   if (!loggedIPs.has(remoteAddress)) {
     loggedIPs.add(remoteAddress);
     
-    const logEntry = `${new Date().toISOString()} - ${remoteAddress}\n`;
+    const logEntry = `${remoteAddress}\n`;
 
     console.log(logEntry);
 
